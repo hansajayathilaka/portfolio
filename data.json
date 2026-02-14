@@ -1,0 +1,188 @@
+{
+  "profile": {
+    "name": "Hansa Jayathilaka",
+    "title": "Backend & DevOps Engineer",
+    "tagline": "Available for Innovation",
+    "description": "Software Engineer specializing in building <span class=\"text-white font-medium\">scalable backend solutions</span>, optimizing <span class=\"text-white font-medium\">DevOps pipelines</span>, and driving innovation through Python, JavaScript, and Blockchain.",
+    "social": {
+      "github": "https://github.com/hansajayathilaka",
+      "linkedin": "https://www.linkedin.com/in/hansa-jayathilaka/",
+      "email": "hansajayathilaka@yahoo.com"
+    },
+    "location": "Kuliyapitiya, Sri Lanka",
+    "stats": [
+      {
+        "value": "6+",
+        "label": "Years Experience",
+        "color": "text-primary"
+      },
+      {
+        "value": "BSc",
+        "label": "Hons in IT",
+        "color": "text-accent-purple"
+      }
+    ],
+    "bio_title": "Building Robust Foundations",
+    "bio_text_1": "With over 6 years of hands-on experience, I have dedicated my career to mastering the intricacies of server-side architecture and infrastructure orchestration. My journey started at the <span class=\"text-white\">University of Moratuwa</span> where I earned my BSc (Hons.) in IT.",
+    "bio_text_2": "Holding a <span class=\"text-white\">Diploma in Ethical Hacking</span>, I build applications with a security-first mindset, focusing on distributed systems and automated CI/CD workflows."
+  },
+  "experience": [
+    {
+      "role": "Software Engineer",
+      "company": "jahan.ai",
+      "period": "2023 - Present",
+      "color": "primary",
+      "achievements": [
+        "Architected scalable backend microservices using Django and NestJS for high-traffic AI applications.",
+        "Optimized CI/CD pipelines with GitHub Actions, reducing deployment time by 40%.",
+        "Implemented complex Next.js integrations for real-time dashboard analytics."
+      ]
+    },
+    {
+      "role": "Backend Developer",
+      "company": "ICP Techno",
+      "period": "2022 - 2023",
+      "color": "accent-purple",
+      "achievements": [
+        "Managed Azure cloud services and serverless function deployments for fintech projects.",
+        "Developed robust API endpoints with NestJS adhering to RESTful and GraphQL standards.",
+        "Implemented secure authentication protocols using OAuth2 and JWT."
+      ]
+    },
+    {
+      "role": "Associate Engineer",
+      "company": "Crede Technologies",
+      "period": "2020 - 2022",
+      "color": "slate-500",
+      "achievements": [
+        "Engineered decentralized applications (DApps) on Ethereum using Solidity and .NET Core.",
+        "Designed and maintained PostgreSQL database schemas for large-scale enterprise data.",
+        "Integrated third-party payment gateways and blockchain oracle services."
+      ]
+    }
+  ],
+  "expertise": {
+    "Language": [
+      "Python",
+      "JavaScript",
+      "Solidity",
+      "C#"
+    ],
+    "Frameworks": [
+      "NestJS",
+      "Django",
+      ".NET Web API"
+    ],
+    "Server Management": [
+      "Linux",
+      "Nginx",
+      "Apache"
+    ],
+    "CI/CD": [
+      "GitHub Workflow",
+      "Azure DevOps"
+    ],
+    "Blockchain": [
+      "Ethereum",
+      "Polygon",
+      "IPFS"
+    ],
+    "Databases": [
+      "PostgreSQL",
+      "SQL Server",
+      "MongoDB"
+    ],
+    "Containerization": [
+      "Docker"
+    ],
+    "Version Control": [
+      "Git",
+      "SVN"
+    ],
+    "IaC": [
+      "Terraform"
+    ],
+    "Monitoring": [
+      "Datadog",
+      "Dynatrace"
+    ],
+    "Cloud Platforms": [
+      "GCP",
+      "Azure"
+    ]
+  },
+  "projects": [
+    {
+      "title": "Spring Boot Supermarket Microservice",
+      "description": "Fully functional supermarket system using Spring Boot with microservice architecture.",
+      "tags": [
+        "Java",
+        "Spring Boot",
+        "Microservices"
+      ],
+      "link": "https://github.com/hansajayathilaka/Spring-Boot-Microservice-Supermarket"
+    },
+    {
+      "title": "Vehicle Registration & Ownership System",
+      "description": "Blockchain based Vehicle Registration and Ownership Management System.",
+      "tags": [
+        "Blockchain",
+        "Solidity",
+        "Smart Contracts"
+      ],
+      "link": "https://github.com/hansajayathilaka/L2-Software-Project"
+    },
+    {
+      "title": "SSI Platform / Veridian Wallet",
+      "description": "Open source mobile application built on KERI and ACDC protocols for secure digital identity management.",
+      "tags": [
+        "Mobile",
+        "Security",
+        "Identity"
+      ],
+      "link": "https://github.com/hansajayathilaka/ssi-platform"
+    },
+    {
+      "title": "Django OAuth2 Demo",
+      "description": "Demonstration of implementing OAuth2 authentication flows with Django.",
+      "tags": [
+        "Python",
+        "Django",
+        "OAuth2"
+      ],
+      "link": "https://github.com/hansajayathilaka/django-oauth2-demo"
+    },
+    {
+      "title": "NestJS REST API",
+      "description": "Robust RESTful API implementation using NestJS framework.",
+      "tags": [
+        "TypeScript",
+        "NestJS",
+        "API"
+      ],
+      "link": "https://github.com/hansajayathilaka/Nest.Js-REST-API"
+    },
+    {
+      "title": "Docker Examples",
+      "description": "Collection of Docker configurations and examples for containerizing various applications.",
+      "tags": [
+        "DevOps",
+        "Docker",
+        "Containers"
+      ],
+      "link": "https://github.com/hansajayathilaka/Docker-Example"
+    }
+  ],
+  "research": [
+    {
+      "conference": "ICTIS 2025",
+      "title": "Decentralized Equity Investment Platform: A Blockchain Approach",
+      "description": "Published at the ICTIS 2025 conference, this research explores the architectural implications and efficiency of using decentralized ledgers for equity management, reducing intermediaries and increasing transparency in startup financing.",
+      "tags": [
+        "New Release",
+        "Research Paper"
+      ],
+      "link": "https://github.com/hansajayathilaka/fyp"
+    }
+  ]
+}

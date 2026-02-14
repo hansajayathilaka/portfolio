@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Hansa Jayathilaka | Backend &amp; DevOps Engineer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4387f4",
+                        "accent-purple": "#8b5cf6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0a0a0c",
+                        "card-dark": "#161b22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-background-dark;
+                background-image: 
+                    radial-gradient(circle at 50% 0%, rgba(67, 135, 244, 0.15) 0%, transparent 50%),
+                    radial-gradient(circle at 100% 100%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
+            }
+        }
+        .grid-pattern {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+        .glass-card {
+            background: rgba(22, 27, 34, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glow-blue {
+            box-shadow: 0 0 20px rgba(67, 135, 244, 0.4);
+        }
+        .glow-purple {
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+        }
+    </style>
+</head>
+
+<body class="font-display text-slate-300 antialiased selection:bg-primary/30 selection:text-primary overflow-x-hidden">
+    <div class="fixed inset-0 grid-pattern pointer-events-none z-0"></div>
+
+    <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-background-dark/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div
+                    class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center font-bold text-white shadow-lg shadow-primary/20">
+                    H</div>
+                <span class="text-white font-bold tracking-tight">HANSA.J</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-widest text-slate-400">
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                <a href="#stack" class="hover:text-primary transition-colors">Expertise</a>
+                <a href="#github-projects" class="hover:text-primary transition-colors">Projects</a>
+                <a href="#research" class="hover:text-primary transition-colors">Research</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="relative z-10">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20"
+            id="hero-section">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-tighter mb-6">
+                <span class="relative flex h-2 w-2">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </span>
+                <span id="hero-tagline">Available for Innovation</span>
+            </div>
+            <h1 class="text-5xl md:text-8xl font-extrabold text-white mb-6 tracking-tighter">
+                <span id="hero-name-first">Hansa</span> <span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent-purple"
+                    id="hero-name-last">Jayathilaka</span>
+            </h1>
+            <p class="max-w-2xl text-lg md:text-xl text-slate-400 font-light leading-relaxed mb-10"
+                id="hero-description">
+                <!-- Description loaded via JS -->
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="https://github.com" id="hero-github-link" target="_blank"
+                    class="px-8 py-4 bg-primary text-white font-bold rounded-lg glow-blue hover:brightness-110 transition-all flex items-center gap-2">
+                    <span class="material-icons text-sm">code</span> View GitHub
+                </a>
+                <a href="Hansa Jayathilaka - SE.pdf" download
+                    class="px-8 py-4 border border-accent-purple/50 text-accent-purple font-bold rounded-lg hover:bg-accent-purple/10 transition-all flex items-center gap-2">
+                    <span class="material-icons text-sm">download</span> Download Resume
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div
+                        class="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-accent-purple/20 blur-2xl rounded-full">
+                    </div>
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_o0cdLhcm8AGiu0tKx_S9xSh6mR-Wi5BQ0u5vmNZBwxQF5sWTFp607-xmtEg78aCW4o2trLHfMpmcdbQMwe15lUhf04f7XhLuLbzxD6yaSiWjt3pm1p5qaYd-Foz1N98KQC-sLGZ7w3rjbrTj0Saav5f4aFwj69WaWTGsqGTQVGpLlu59EMteTAhf4EGBESEN0UGJzaxq0QL_3cWp7ujhSdRJrEXqPmG4IJL4THNHPnWRFqOdtaE7szbSztL_Bh3YtXrYrPJnmwg"
+                        alt="Developer at work"
+                        class="relative rounded-xl border border-white/10 shadow-2xl grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-6" id="about-title">Building Robust Foundations</h2>
+                    <p class="text-slate-400 mb-6 leading-relaxed" id="about-text-1"></p>
+                    <p class="text-slate-400 mb-8 leading-relaxed" id="about-text-2"></p>
+
+                    <div class="grid grid-cols-2 gap-6" id="about-stats">
+                        <!-- Stats loaded via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-20">
+                    <h2 class="text-sm font-bold tracking-[0.3em] text-primary uppercase mb-3">The Professional Path
+                    </h2>
+                    <h3 class="text-4xl md:text-5xl font-bold text-white">Experience Timeline</h3>
+                </div>
+
+                <div class="relative max-w-5xl mx-auto">
+                    <div
+                        class="absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary via-accent-purple to-transparent transform md:-translate-x-1/2">
+                    </div>
+                    <div id="experience-container">
+                        <!-- Experience items loaded via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Expertise Section -->
+        <section id="stack" class="py-24 max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold tracking-[0.3em] text-primary uppercase mb-3">Capabilities</h2>
+                <h3 class="text-4xl md:text-5xl font-bold text-white">Technical Expertise</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="expertise-grid">
+                <!-- Expertise items loaded via JS -->
+            </div>
+        </section>
+
+        <!-- GitHub Projects Section -->
+        <section id="github-projects" class="py-24 max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold tracking-[0.3em] text-primary uppercase mb-3">Portfolio</h2>
+                <h3 class="text-4xl md:text-5xl font-bold text-white">Selected Projects</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-grid">
+                <!-- Projects loaded via JS -->
+            </div>
+        </section>
+
+        <!-- Research Section -->
+        <section id="research" class="py-24 bg-white/[0.02]">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                    <div>
+                        <h2 class="text-sm font-bold tracking-widest text-primary uppercase mb-2">Academic</h2>
+                        <h3 class="text-4xl font-bold text-white">Research Contributions</h3>
+                    </div>
+                    <div class="flex items-center gap-2 text-slate-400 text-sm">
+                        <span class="material-icons text-primary">verified</span> ICTIS 2025
+                    </div>
+                </div>
+
+                <div id="research-container">
+                    <!-- Research loaded via JS items -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 max-w-7xl mx-auto px-6">
+            <div class="glass-card rounded-3xl p-8 md:p-16 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] rounded-full"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-accent-purple/10 blur-[100px] rounded-full"></div>
+
+                <div class="relative z-10 text-center max-w-3xl mx-auto">
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Let's build something <span
+                            class="text-primary italic">extraordinary</span>.</h3>
+                    <p class="text-slate-400 mb-10 text-lg">Currently open to senior backend engineering roles, DevOps
+                        consultancy, or collaborative blockchain ventures.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <div class="flex items-center justify-center gap-4 group cursor-pointer">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                                <span class="material-icons text-primary">mail</span>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-[10px] uppercase font-bold text-slate-500 tracking-widest">Email Me</p>
+                                <p class="text-white font-medium" id="contact-email">hansajayathilaka@yahoo.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-center gap-4 group cursor-pointer">
+                            <div
+                                class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-accent-purple/20 transition-colors">
+                                <span class="material-icons text-accent-purple">location_on</span>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-[10px] uppercase font-bold text-slate-500 tracking-widest">Location</p>
+                                <p class="text-white font-medium" id="contact-location">Kuliyapitiya, Sri Lanka</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center gap-6" id="contact-socials">
+                        <!-- Social icons -->
+                        <a href="#" id="contact-linkedin" target="_blank"
+                            class="w-12 h-12 rounded-lg border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-primary transition-all">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" id="contact-github" target="_blank"
+                            class="w-12 h-12 rounded-lg border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-white transition-all">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-white/5 text-center relative z-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-slate-500 text-sm">© 2024 Hansa Jayathilaka. All rights reserved.</p>
+            <div class="flex items-center gap-6 text-xs font-bold uppercase tracking-widest text-slate-500">
+                <span>Designed with Precision</span>
+                <span class="w-1 h-1 rounded-full bg-primary"></span>
+                <span>Powered by Engineering</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    renderProfile(data.profile);
+                    renderExperience(data.experience);
+                    renderExpertise(data.expertise);
+                    renderProjects(data.projects);
+                    renderResearch(data.research);
+                })
+                .catch(error => console.error('Error loading data:', error));
+        });
+
+        function renderProfile(profile) {
+            document.getElementById('hero-tagline').textContent = profile.tagline;
+            document.getElementById('hero-name-first').textContent = profile.name.split(' ')[0];
+            document.getElementById('hero-name-last').textContent = profile.name.split(' ').slice(1).join(' ');
+            document.getElementById('hero-description').innerHTML = profile.description;
+            document.getElementById('hero-github-link').href = profile.social.github;
+
+            document.getElementById('about-title').textContent = profile.bio_title;
+            document.getElementById('about-text-1').innerHTML = profile.bio_text_1;
+            document.getElementById('about-text-2').innerHTML = profile.bio_text_2;
+
+            const statsContainer = document.getElementById('about-stats');
+            statsContainer.innerHTML = '';
+            profile.stats.forEach(stat => {
+                const statHTML = `
+                    <div class="glass-card p-4 rounded-lg">
+                        <div class="text-3xl font-bold ${stat.color} mb-1">${stat.value}</div>
+                        <div class="text-xs uppercase tracking-widest text-slate-500 font-bold">${stat.label}</div>
+                    </div>
+                `;
+                statsContainer.innerHTML += statHTML;
+            });
+
+            document.getElementById('contact-email').textContent = profile.social.email;
+            document.getElementById('contact-location').textContent = profile.location;
+            document.getElementById('contact-github').href = profile.social.github;
+            document.getElementById('contact-linkedin').href = profile.social.linkedin;
+        }
+
+        function renderExperience(experience) {
+            const container = document.getElementById('experience-container');
+            container.innerHTML = '';
+            experience.forEach((job, index) => {
+                const isEven = index % 2 === 0;
+
+                // Color mapping
+                const colorClass = job.period.includes('Present') ? 'text-primary' : (
+                    job.role.includes('Associate') ? 'text-slate-400' : 'text-accent-purple'
+                );
+                const bgClass = job.period.includes('Present') ? 'bg-primary' : (
+                    job.role.includes('Associate') ? 'bg-slate-500' : 'bg-accent-purple'
+                );
+                const borderClass = job.period.includes('Present') ? 'border-l-primary' : (
+                    job.role.includes('Associate') ? 'border-l-slate-500' : 'border-r-accent-purple md:border-l-0 md:border-r-4'
+                );
+
+                const itemHTML = `
+                <div class="relative mb-20 md:flex ${isEven ? 'md:justify-between' : 'md:flex-row-reverse md:justify-between'} items-center w-full">
+                    <div class="hidden md:block w-[45%]"></div>
+                    <div class="absolute left-0 md:left-1/2 w-5 h-5 rounded-full ${bgClass} border-4 border-background-dark transform -translate-x-1/2 z-20 ${job.period.includes('Present') ? 'glow-blue' : ''}"></div>
+                    <div class="ml-10 md:ml-0 md:w-[45%] group">
+                        <div class="glass-card p-8 rounded-2xl ${isEven ? `border-l-4 ${borderClass}` : `border-l-4 border-l-slate-500 md:border-l-0 border-r-4 border-r-slate-500`} hover:bg-white/5 transition-all duration-500" style="${!isEven && job.role.includes('Backend') ? 'border-color: #8b5cf6;' : ''}">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h4 class="text-2xl font-bold text-white">${job.role}</h4>
+                                    <p class="${job.color === 'primary' ? 'text-primary' : job.color === 'accent-purple' ? 'text-accent-purple' : 'text-slate-400'} font-bold text-lg">${job.company}</p>
+                                </div>
+                                <span class="px-3 py-1 rounded-full ${job.color === 'primary' ? 'bg-primary/10 border-primary/20 text-primary' : job.color === 'accent-purple' ? 'bg-accent-purple/10 border-accent-purple/20 text-accent-purple' : 'bg-white/5 border-white/10 text-slate-400'} border text-xs font-bold whitespace-nowrap">${job.period}</span>
+                            </div>
+                            <ul class="space-y-3 text-slate-400 text-sm">
+                                ${job.achievements.map(ach => `
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-icons ${job.color === 'primary' ? 'text-primary' : job.color === 'accent-purple' ? 'text-accent-purple' : 'text-slate-500'} text-[14px] mt-1">check_circle</span>
+                                        <span>${ach}</span>
+                                    </li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                    </div>
+                </div>`;
+                container.innerHTML += itemHTML;
+            });
+        }
+
+        function renderExpertise(expertise) {
+            const container = document.getElementById('expertise-grid');
+            container.className = "grid grid-cols-1 lg:grid-cols-2 gap-8 items-start";
+            container.innerHTML = '';
+
+            const devCategories = ["Language", "Frameworks", "Databases", "Blockchain", "Version Control"];
+            const opsCategories = ["Cloud Platforms", "Containerization", "IaC", "CI/CD", "Monitoring", "Server Management"];
+
+            const icons = {
+                "Language": "code",
+                "Frameworks": "layers",
+                "Server Management": "dns",
+                "CI/CD": "rocket_launch",
+                "Blockchain": "token",
+                "Databases": "storage",
+                "Containerization": "view_in_ar",
+                "Version Control": "history",
+                "IaC": "architecture",
+                "Monitoring": "monitor_heart",
+                "Cloud Platforms": "cloud"
+            };
+
+            const createColumn = (categories, title, titleColor) => {
+                let html = `<div class="space-y-4">
+                    <h4 class="text-xl font-bold text-white mb-6 flex items-center gap-3">
+                        <span class="w-2 h-8 rounded-full ${titleColor}"></span>
+                        ${title}
+                    </h4>`;
+
+                categories.forEach(cat => {
+                    const skills = expertise[cat];
+                    if (skills) {
+                        html += `
+                            <div class="glass-card p-4 rounded-xl flex flex-col sm:flex-row sm:items-center gap-4 hover:bg-white/5 transition-all group">
+                                <div class="flex items-center gap-3 min-w-[140px]">
+                                    <div class="p-2 rounded-lg bg-white/5 text-slate-400 group-hover:text-white group-hover:bg-primary/20 transition-all">
+                                        <span class="material-icons text-xl">${icons[cat] || 'settings'}</span>
+                                    </div>
+                                    <span class="text-sm font-bold text-slate-300 group-hover:text-white transition-colors">${cat}</span>
+                                </div>
+                                <div class="flex flex-wrap gap-2">
+                                    ${skills.map(skill => `
+                                        <span class="px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider rounded-md bg-white/5 text-slate-400 border border-white/5 group-hover:border-primary/30 group-hover:text-primary transition-all cursor-default">
+                                            ${skill}
+                                        </span>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        `;
+                    }
+                });
+                html += `</div>`;
+                return html;
+            };
+
+            container.innerHTML += createColumn(devCategories, "Development & Engineering", "bg-primary");
+            container.innerHTML += createColumn(opsCategories, "Operations & Infrastructure", "bg-accent-purple");
+        }
+
+        function renderProjects(projects) {
+            const container = document.getElementById('projects-grid');
+            container.innerHTML = '';
+            projects.forEach(project => {
+                const cardHTML = `
+                <div class="glass-card rounded-2xl overflow-hidden hover:border-primary/40 transition-all flex flex-col group h-full">
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="material-icons text-4xl text-primary/20 group-hover:text-primary/80 transition-all">folder</span>
+                            <a href="${project.link}" target="_blank" class="text-slate-500 hover:text-white transition-colors">
+                                <span class="material-icons">open_in_new</span>
+                            </a>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">${project.title}</h4>
+                        <p class="text-slate-400 text-sm mb-6 flex-1">${project.description}</p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            ${project.tags.map(tag => `
+                                <span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded tracking-wider">
+                                    ${tag}
+                                </span>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>`;
+                container.innerHTML += cardHTML;
+            });
+        }
+
+        function renderResearch(research) {
+            const container = document.getElementById('research-container');
+            container.innerHTML = '';
+            research.forEach(item => {
+                container.innerHTML += `
+                <div class="glass-card p-1 rounded-2xl overflow-hidden group">
+                    <div class="bg-background-dark/50 p-8 md:p-12 rounded-2xl flex flex-col md:flex-row gap-10 items-center border border-white/5 transition-all group-hover:border-primary/30">
+                        <div class="w-full md:w-1/3 aspect-video md:aspect-square bg-gradient-to-br from-primary/20 to-accent-purple/20 rounded-xl flex items-center justify-center relative overflow-hidden">
+                            <span class="material-icons text-8xl text-white/10 absolute -right-4 -bottom-4">article</span>
+                            <span class="material-icons text-6xl text-primary">description</span>
+                        </div>
+                        <div class="w-full md:w-2/3">
+                            <div class="flex items-center gap-3 mb-4">
+                                ${item.tags.map(tag => `<span class="px-3 py-1 ${tag === 'New Release' ? 'bg-primary text-white font-black uppercase tracking-widest' : 'text-slate-500 font-medium'} text-[10px] rounded-full">${tag}</span>`).join('')}
+                            </div>
+                            <h4 class="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">${item.title}</h4>
+                            <p class="text-slate-400 leading-relaxed mb-8">${item.description}</p>
+                            <a href="${item.link}" class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all">
+                                READ PUBLICATION <span class="material-icons">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>`;
+            });
+        }
+    </script>
+</body>
+
+</html>
